@@ -3,8 +3,9 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "build": "vite build && node scripts/prepare-vercel-dist.mjs",
+        "dev": "vite",
+        "vercel-build": "vite build && node scripts/prepare-vercel-dist.mjs"
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.0.0",
